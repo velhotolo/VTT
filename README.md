@@ -1,13 +1,24 @@
-# VTT (name to be determined)
+<h1 align="center">The Old Man's Table</h1>
 
-A virtual tabletop for tabletop RPGs, built with Lua and [LÖVE](https://love2d.org).
-Game systems are plain Lua files that you write yourself and load locally; the engine runs them inside a sandbox, so the rules live in data and the interface just reads them.
+<p align="center">
+ A virtual tabletop for tabletop RPGs, built with Lua and [LÖVE](https://love2d.org).
+Game systems are plain Lua files that I wrote myself and loaded locally; the engine runs them inside a sandbox, so the rules live in data and the interface just reads them.
+</p>
+
+<p align="center">
+  <img alt="Lua 5.5" src="https://img.shields.io/badge/Lua-5.5-2C2D72?logo=lua&logoColor=white">
+  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white">
+  <img alt="Platforms: Linux and Windows" src="https://img.shields.io/badge/platforms-Linux%20%7C%20Windows-1F3B32">
+  <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-B8892B">
+</p>
+
+
 
 > **Status:** just started (1 Lua file). Study and portfolio project.
 
 ## Why
 
-Commercial virtual tabletops depend on official modules. VTT takes the opposite route: the table is generic, and each game system is a small Lua file describing attributes, dice and actions. That makes it possible to:
+Commercial virtual tabletops depend on official modules. The Old Man's Table takes the opposite route: the table is generic, and each game system is a small Lua file describing attributes, dice and actions. That makes it possible to:
 
 - play systems that other tabletops don't cover;
 - publish original systems as portfolio pieces, with original numbers and formulas only (no rulebook text).
@@ -16,8 +27,6 @@ Commercial virtual tabletops depend on official modules. VTT takes the opposite 
   but I'm developing the skills and I'm all in to do company management stuff and whatnot!
 
 ## Features
-
-<!-- Check the boxes as each one works in your build. -->
 
 - [x] Dice expression parser (`2d6+3`, `1d20`, ...)
 - [ ] Sandboxed rules engine: systems can't touch files, the OS or the network
@@ -118,7 +127,7 @@ LÖVE only writes to its save directory:
   and https://www.udemy.com/course/programar-lua-do-zero/learn/lecture/24372736?start=0#overview.
 - I tried one LÖVE course but didn't like it very much. The DOCs are good, there are plenty of game structures for you to try, but for a noob like me, sometimes
   things get way too hard. https://www.udemy.com/course/programming-for-beginners-with-lua-and-love2d/learn/lecture/50832807#overview This course, on the other
-  hand, was amazing. It made me believe I can do the VTT project.
+  hand, was amazing. It made me believe I can do the Old Man's Table project.
 
 ## Author
 
