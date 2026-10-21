@@ -7,7 +7,7 @@ Game systems are plain Lua files that I wrote myself and loaded locally; the eng
 
 <p align="center">
   <img alt="Lua 5.5" src="https://img.shields.io/badge/Lua-5.5-2C2D72?logo=lua&logoColor=white">
-  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white">
+  <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/770a7560-5b8d-4c93-a5a7-cbbcfc04c754" />
   <img alt="Platforms: Linux and Windows" src="https://img.shields.io/badge/platforms-Linux%20%7C%20Windows-1F3B32">
   <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-B8892B">
 </p>
