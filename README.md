@@ -9,12 +9,9 @@ Game systems are plain Lua files that I wrote myself and loaded locally; the eng
   <img alt="Lua 5.5" src="https://img.shields.io/badge/Lua-5.5-2C2D72?logo=lua&logoColor=white">
   <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/770a7560-5b8d-4c93-a5a7-cbbcfc04c754" />
   <img alt="Platforms: Linux and Windows" src="https://img.shields.io/badge/platforms-Linux%20%7C%20Windows-1F3B32">
-  <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-B8892B">
+  <img alt="Status: early development" src="https://img.shields.io/badge/status-Alpha-B8892B">
 </p>
 
-
-
-> **Status:** just started (1 Lua file). Study and portfolio project.
 
 ## Why
 
@@ -32,9 +29,21 @@ Commercial virtual tabletops depend on official modules. The Old Man's Table tak
 - [x] Sandboxed rules engine: systems can't touch files, the OS or the network
 - [x] Character sheet generated from the system's attributes and actions
 - [x] Grid map with camera, zoom and draggable tokens
-- [ ] Console with chat-style log and slash commands
-- [ ] Save and load campaigns
+- [x] Console with chat-style log and slash commands
+- [x] Save and load campaigns
 - [ ] Unit tests for the core (no LÖVE required)
+
+## Update
+ I finished what I had planned for the most part. I mean, all files are there and working. Heres a few prints of the project:
+ 
+<img width="793" height="658" alt="Image" src="https://github.com/user-attachments/assets/eb17fb7c-176b-49a8-82ad-1a69897523fe" />
+
+<img width="793" height="658" alt="Image" src="https://github.com/user-attachments/assets/7e30ff4e-213a-42a2-a02d-eea4bb4e9a8d" />
+
+<img width="793" height="658" alt="Image" src="https://github.com/user-attachments/assets/7ae58e90-79ba-410e-a385-3c01b4c3a753" />
+
+As we can see, there's something really weird going on with the window size, and I did set the resizing to be on. Also, the title of the 
+window is missing. Other than that, I think I'm getting there! Now it's time for some eons of debugging wee-a-hoo!!
 
 ## Requirements
 
