@@ -31,7 +31,7 @@ Commercial virtual tabletops depend on official modules. The Old Man's Table tak
 - [x] Dice expression parser (`2d6+3`, `1d20`, ...)
 - [x] Sandboxed rules engine: systems can't touch files, the OS or the network
 - [x] Character sheet generated from the system's attributes and actions
-- [ ] Grid map with camera, zoom and draggable tokens
+- [x] Grid map with camera, zoom and draggable tokens
 - [ ] Console with chat-style log and slash commands
 - [ ] Save and load campaigns
 - [ ] Unit tests for the core (no LÖVE required)
