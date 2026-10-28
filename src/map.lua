@@ -14,6 +14,8 @@ function Map.new()
     self.area = { x = 0, y = 0, w = 800, h = 600 } -- screen region for the map
     self.dragging = nil
     self.panning = false                           -- dragging camera
+
+    return self                                    -- <-- THIS WAS MISSING!
 end
 
 function Map:screenToWorld(sx, sy)
@@ -107,15 +109,18 @@ local function initials(name)
     end
     return table.concat(out):upper()
 end
+
 function Map:draw(campaign, selected, target)
     local a, g = self.area, love.graphics
     g.setScissor(a.x, a.y, a.w, a.h)
     g.setColor(UI.colors.bg)
     g.rectangle("fill", a.x, a.y, a.w, a.h)
+
     g.push()
     g.translate(a.x, a.y)
     g.scale(self.cam.zoom)
     g.translate(-self.cam.x, -self.cam.y)
+
     -- Grid
     local size = GRID_CELLS * CELL
     g.setColor(UI.colors.grid)
@@ -123,6 +128,7 @@ function Map:draw(campaign, selected, target)
         g.line(i * CELL, 0, i * CELL, size)
         g.line(0, i * CELL, size, i * CELL)
     end
+
     -- Tokens
     for _, t in ipairs(campaign.tokens) do
         if t ~= self.dragging then self:drawToken(t, t.x * CELL + CELL / 2, t.y * CELL + CELL / 2, selected, target) end
@@ -139,15 +145,18 @@ function Map:drawToken(t, wx, wy, selected, target)
     local g, r = love.graphics, CELL * 0.4
     g.setColor(t.color[1], t.color[2], t.color[3])
     g.circle("fill", wx, wy, r)
+
     if t == selected then
         g.setColor(UI.colors.accent); g.setLineWidth(3)
         g.circle("line", wx, wy, r + 4)
     end
+
     if t == target then
         g.setColor(UI.colors.danger); g.setLineWidth(2)
         g.line(wx - r - 8, wy, wx - r + 2, wy); g.line(wx + r - 2, wy, wx + r + 8, wy)
         g.line(wx, wy - r - 8, wx, wy - r + 2); g.line(wx, wy + r - 2, wx, wy + r + 8)
     end
+
     g.setLineWidth(1)
     local font, label = g.getFont(), initials(t.name)
     g.setColor(0, 0, 0)
@@ -155,3 +164,4 @@ function Map:drawToken(t, wx, wy, selected, target)
 end
 
 return Map
+

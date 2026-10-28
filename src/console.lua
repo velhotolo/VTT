@@ -96,6 +96,10 @@ local function format(e)
 end
 
 function Console:draw(campaign)
+    -- Essential camera and scissor resets to prevent the console from vanishing
+    love.graphics.origin()
+    love.graphics.setScissor()
+
     local a, g = self.area, love.graphics
     g.setColor(UI.colors.panel)
     g.rectangle("fill", a.x, a.y, a.w, a.h)
@@ -118,7 +122,7 @@ function Console:draw(campaign)
         g.print(main, a.x + 8, y)
         if y < a.y then break end
     end
-    g.setScissor()
+    g.setScissor() -- disables the log scissor
 
     -- Input field
     local iy = a.y + a.h - 30
@@ -132,4 +136,3 @@ function Console:draw(campaign)
 end
 
 return Console
-

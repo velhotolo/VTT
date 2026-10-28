@@ -28,6 +28,7 @@ local app                = {
 }
 local map, sheet, console
 
+
 local function notify(text)
     app.message, app.messageT = text, 4 -- shows for 4 seconds
 end
@@ -159,7 +160,9 @@ local function drawMenu()
     local w = love.graphics.getWidth()
     love.graphics.clear(UI.colors.bg[1], UI.colors.bg[2], UI.colors.bg[3])
 
-    local x, y, bw = 40, 40, math.min(560, w - 80)
+    local bw = math.min(560, w - 80)
+    local x = math.floor((w - bw) / 2)
+    local y = 40
     UI.text("Table: choose the system", x, y, bw, UI.colors.accent)
     y = y + 40
 
@@ -193,6 +196,8 @@ function love.draw()
     else
         layout()
         map:draw(app.campaign, app.selected, app.target)
+        love.graphics.origin()
+        love.graphics.setScissor()
         console:draw(app.campaign)
         sheet:draw(app)
     end
