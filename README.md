@@ -34,7 +34,14 @@ Commercial virtual tabletops depend on official modules. The Old Man's Table tak
 - [ ] Unit tests for the core (no LÖVE required)
 
 ## Update
- I finished what I had planned for the most part. I mean, all files are there and working. Heres a few prints of the project:
+ 28/10/26 Worked on resolution of the screens. Looks way better now:
+ <img width="1459" height="1061" alt="Image" src="https://github.com/user-attachments/assets/2f492cb1-9fae-4bac-8734-35f6e10eaf61" />
+
+ You can also see the console:
+
+ <img width="1459" height="1061" alt="Image" src="https://github.com/user-attachments/assets/9dbc0a5b-3357-426b-8414-aa0f00008851" />
+ 
+ I finished what I had planned for the most part. I mean, all files are there and working. Here's a few prints of the project:
  
 <img width="793" height="658" alt="Image" src="https://github.com/user-attachments/assets/eb17fb7c-176b-49a8-82ad-1a69897523fe" />
 
